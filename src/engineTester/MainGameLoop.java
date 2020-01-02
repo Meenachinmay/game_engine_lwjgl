@@ -19,14 +19,16 @@ public class MainGameLoop {
             // Left Bottom Triangle
             -0.5F, 0.5F, 0f,
             -0.5F, -0.5F, 0f,
-            0.5F, -0.5F, 0f,
-            // Right Top Triangle
-            0.5F, -0.5F, 0f,
-            0.5F, 0.5F, 0f,
-            -0.5F, 0.5F, 0f,
+             0.5F, -0.5F, 0f,
+             0.5F, 0.5F, 0f,
 	    };
+		 
+		int[] indices = {
+			0,1,3, // Top left triangle
+			3,1,2 // bottom right triangle
+		};
 
-		 RawModel model = loader.loadToVAO(verticies);
+		RawModel model = loader.loadToVAO(verticies, indices);
 		
 		while(!Display.isCloseRequested()) {
 			renderer.prepare();
