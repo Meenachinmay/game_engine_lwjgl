@@ -13,6 +13,7 @@ public class StaticShader extends ShaderProgram{
 	protected void bindAttributes() {
 		// TODO Auto-generated method stub
 		super.bindAttributes(0, "position");
+		super.bindAttributes(1, "textureCoords");
 		
 	}
 
